@@ -1,0 +1,4 @@
+.electron-vue/* linguist-documentation
+build/* linguist-documentation
+dist/* linguist-documentation
+static/* linguist-documentation
