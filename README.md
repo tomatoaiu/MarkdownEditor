@@ -9,6 +9,7 @@
 npm install
 
 # serve with hot reload at localhost:9080
+# can write markdown
 npm run dev
 
 # build electron application for production
