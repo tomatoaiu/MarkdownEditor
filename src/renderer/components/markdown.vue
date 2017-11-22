@@ -1,29 +1,30 @@
 <template lang="html">
     <!-- <div> -->
         <div id="wrapper">
-            <li><router-link to="hello">Hello</router-link></li>
-            <li><router-link to="electron-vue">Root</router-link></li>
             <div id="editor">
                 <textarea :value="input" @input="update"></textarea>
-                <div v-html="compiledMarkdown"></></div>
+                <div v-html="compiledMarkdown"></div>
             </div>
         </div>
     <!-- </div> -->
 </template>
 
 <script>
-import marked from "marked"
+import marked from "markdown-it"
+var md = require('markdown-it')();
 import debounce from 'lodash/debounce';
 export default {
     name: 'markdown-page',
     data: function(){
         return {
-            input: '# hello, world'
+            input: '# hello, world',
+
         }
     },
     computed: {
         compiledMarkdown: function () {
-            return marked(this.input, { sanitize: true })
+            // return marked(this.input, { sanitize: true })
+            return md.render(this.input)
         }
     },
     methods: {

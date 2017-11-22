@@ -1,15 +1,20 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        <header-component></header-component>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-  export default {
-    name: 'markdowneditor'
-  }
+import Header from "./components/header.vue";
+export default {
+    name: 'markdowneditor',
+    components :{
+        'header-component' : Header
+    }
+}
 </script>
 
 <style>
-  /* CSS */
+/* CSS */
 </style>
