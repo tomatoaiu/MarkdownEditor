@@ -24,10 +24,27 @@ export default {
 .header .router-link{
 
 }
-
-.header .router-link li{
+.header ul{
     padding: 0px;
     margin: 0px;
-    width: 50px;
+}
+.header .router-link li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    margin: 0px;
+    display: inline-block;
+}
+.header .router-link li:first-child{
+    padding-left: 30px;
+}
+.header .router-link li:last-child{
+    padding-right: 0px;
+}
+.header .router-link li a{
+    text-decoration: none;
+}
+.header .router-link li a:hover{
+    opacity: 0.3;
 }
 </style>
